@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barbearia Seu Zé</title>
+<style>
+:root{--bg:#f2f5f4;--surface:#ffffff;--ink:#14262d;--muted:#52666d;--line:#cfdad9;--red:#c0322b;--blue:#1d4f7c;--on-accent:#ffffff;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1c21;--surface:#16272d;--ink:#eaf1f0;--muted:#9fb3b8;--line:#2a4047;--red:#e0584f;--blue:#5a9ad0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1c21;--surface:#16272d;--ink:#eaf1f0;--muted:#9fb3b8;--line:#2a4047;--red:#e0584f;--blue:#5a9ad0;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2{font-family:Rockwell,"Roboto Slab","Courier New",Georgia,serif;line-height:1.1;margin:0}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px 0 36px;position:relative}
+.pole{position:fixed;left:0;top:0;bottom:0;width:14px;background:repeating-linear-gradient(135deg,var(--red) 0 12px,var(--surface) 12px 24px,var(--blue) 24px 36px,var(--surface) 36px 48px);background-size:68px 68px;animation:spin 6s linear infinite}
+@keyframes spin{to{background-position:0 68px}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+header{padding:56px 0 40px}
+header p{color:var(--muted);margin:0 0 10px}
+h1{font-size:clamp(2.6rem,12vw,4rem);font-weight:800}
+.lead{font-size:1.15rem;max-width:30em;margin:18px 0 28px}
+.btn{display:inline-block;background:var(--red);color:var(--on-accent);font-weight:700;text-decoration:none;padding:14px 22px;border-radius:6px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+section{padding:32px 0;border-top:1px solid var(--line)}
+h2{font-size:1.7rem;margin-bottom:16px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.row span:last-child{font-weight:700;white-space:nowrap}
+.row small{display:block;color:var(--muted);font-size:.9rem}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 20px}
+dt{font-weight:700}dd{margin:0}
+.closed{color:var(--muted)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="pole" aria-hidden="true"></div>
+<div class="wrap">
+<header>
+<p>Barbearia no Centro, desde 1998</p>
+<h1>Barbearia Seu Zé</h1>
+<p class="lead">Corte na tesoura, barba com toalha quente e café na casa. Chegue sem hora marcada ou reserve o seu horário pelo WhatsApp.</p>
+<a class="btn" href="https://wa.me/5500000000000">Reservar pelo WhatsApp</a>
+</header>
+
+<section id="servicos">
+<h2>Serviços e preços</h2>
+<div class="row"><span>Corte na tesoura<small>Lavagem e finalização inclusas</small></span><span>R$ 45</span></div>
+<div class="row"><span>Corte na máquina<small>Degradê ou corte reto</small></span><span>R$ 35</span></div>
+<div class="row"><span>Barba com toalha quente<small>Navalha e hidratação</small></span><span>R$ 35</span></div>
+<div class="row"><span>Corte e barba<small>O pacote mais pedido</small></span><span>R$ 70</span></div>
+<div class="row"><span>Sobrancelha</span><span>R$ 15</span></div>
+</section>
+
+<section id="horarios">
+<h2>Horário de atendimento</h2>
+<dl>
+<dt>Terça a sexta</dt><dd>9h às 19h</dd>
+<dt>Sábado</dt><dd>8h às 17h</dd>
+<dt class="closed">Domingo e segunda</dt><dd class="closed">Fechado</dd>
+</dl>
+</section>
+
+<section id="contato">
+<h2>Como chegar</h2>
+<p>Rua das Palmeiras, 120, Centro<br>Ao lado da padaria Pão Quente. Estacionamento na porta.</p>
+<a class="btn" href="https://wa.me/5500000000000">Chamar no WhatsApp</a>
+</section>
+
+<footer>Site de exemplo com empresa fictícia, criado para demonstração. Nomes, endereço, preços e telefone não são reais.</footer>
+</div>
+</body>
+</html>
